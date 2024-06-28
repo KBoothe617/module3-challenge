@@ -7,7 +7,7 @@ const collectEmployees = function () {
   let empolyeesArray = [];
   let addemployee = true;
 
-  while (addemployee){
+  while (true){
     let firstName = prompt('Enter employee first name');
     let lastName = prompt('Enter employee last name');
     let salary = prompt('Enter employee salary')
@@ -22,9 +22,14 @@ const collectEmployees = function () {
       lastName: lastName,
       salary: salaryNum,
     });
-    addemployee = confirm('Would you like to enter another employee?');
+
+    let addemployee = confirm('Would you like to enter another employee?');
+    if (!addemployee) {
+      break;
+    }
+  }
+
   return empolyeesArray;
-  };
 
 };
 
