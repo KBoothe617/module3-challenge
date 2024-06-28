@@ -39,7 +39,7 @@ const displayAverageSalary = function (employeesArray) {
   let salaryTotal = employeesArray.reduce((sum, employee) => sum + employee.salary, 0);
   let salaryAverage = salaryTotal / employeesArray.length;
 
-  console.log('Average employee salary is ' + salaryAverage);
+  console.log('Average employee salary is ' + salaryAverage.toFixed(2));
 };
 
 // Select a random employee
@@ -48,7 +48,7 @@ const getRandomEmployee = function (employeesArray) {
   const randomNum = Math.floor(Math.random() * employeesArray.length);
   const randomEmployee = employeesArray[randomNum];
   
-  console.log('Congratulations to ' + randomEmployee.firstName + ' ' + randomEmployee.lastName + ', they are the lucky random drawing winner.');
+  console.log('Congratulations to ' + randomEmployee.firstName + ' ' + randomEmployee.lastName + ', our random drawing winner!');
 };
 
 /*
